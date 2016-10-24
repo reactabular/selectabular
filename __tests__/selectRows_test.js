@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable */
 import selectabular from '../dist/selectabular';
 
 const can1 = {

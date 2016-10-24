@@ -1,3 +1,3 @@
-let greeting = 'aloha'
+const greeting = 'aloha';
 
-export default greeting
+export default greeting;

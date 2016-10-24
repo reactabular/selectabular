@@ -1,18 +1,21 @@
+const path = require('patch');
+
 module.exports = {
   entry: [
     './src/index.js'
   ],
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, '/dist'),
     filename: 'selectabular.js',
-    library:'selectabular',
-    libraryTarget:'umd'
+    library: 'selectabular',
+    libraryTarget: 'umd'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel'
-    },
+    loaders: [
+      {
+        exclude: /node_modules/,
+        loader: 'babel'
+      }
     ]
   },
   resolve: {
