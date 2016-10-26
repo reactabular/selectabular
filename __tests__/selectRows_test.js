@@ -29,6 +29,24 @@ describe('select.all', () => {
     expect(allSelected).toEqual(expected);
   });
 });
+describe('select.none', () => {
+  const initRows = [
+    { id: 10, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
+    { id: 11, selected:true, product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
+    { id: 12, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
+    { id: 13, selected:false, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
+  ];
+  const expected = [
+    { id: 10, selected:false, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
+    { id: 11, selected:false, product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
+    { id: 12, selected:false, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
+    { id: 13, selected:false, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
+  ];
+  const result = selectabular.none(initRows);
+  it('returns all rows with selected=true', () => {
+    expect(result).toEqual(expected);
+  });
+});
 
 /*
 const myrows = [
