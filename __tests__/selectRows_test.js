@@ -1,6 +1,5 @@
 /* eslint-disable */
-//import selectabular from '../dist/selectabular';
-import selectabular from '../src/index';
+const selectabular = require('../src').default;
 
 const can1 = {
   flavor: 'grapefruit',
