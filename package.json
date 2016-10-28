@@ -4,6 +4,7 @@
   "description": "Selection utilities",
   "scripts": {
     "test": "jest --",
+    "test:coverage": "jest --coverage --",
     "test:lint": "eslint . --ext .js --cache",
     "test:watch": "jest --watch --",
     "dist:all": "npm run dist:build && npm run dist:build-min",
