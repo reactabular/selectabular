@@ -1,6 +1,6 @@
 {
   "name": "selectabular",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Selection utilities",
   "scripts": {
     "test": "jest --",
@@ -34,6 +34,18 @@
     ]
   },
   "author": "Juho Vepsalainen <bebraw@gmail.com> (http://github.com/bebraw)",
+  "contributors":[
+    {
+      "name":"Juho Vepsalainen",
+      "email":"brebaw@gmail.com",
+      "url":"http://github.com/brebaw"
+    },
+    {
+      "name":"Toni Urcola",
+      "email":"unmail.toni@gmail.com",
+      "url":"http://github.com/git-toni"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/reactabular/selectabular/issues"
