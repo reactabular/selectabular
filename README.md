@@ -36,16 +36,18 @@ const initRows = [
 ];
 const myfilter = row => row.price > 5
 const {rows, selectedRows: result } = selectabular.rows(myfilter)(initRows);
-//  >> result 
-//  [{ id: 12,  product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
-//   { id: 13,  product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }];
-//  >> result 
-//  >> rows
-//  { id: 10, selected:true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
-//  { id: 11, product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
-//  { id: 12, selected:true, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
-//  { id: 13, selected:true, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
-//];
+>> result 
+[
+  { id: 12,  product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
+  { id: 13,  product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
+];
+>> rows
+[
+  { id: 10, selected:true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
+  { id: 11, product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
+  { id: 12, selected:true, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
+  { id: 13, selected:true, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
+];
 ```
 
 #### Returns:
@@ -76,13 +78,13 @@ const initRows = [
 ];
 const fil = row => row.id < 12
 const result = selectabular.toggle(fil)(initRows);
-// >> result
-//[
-//  { id: 10, selected: true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
-//  { id: 11, selected: false, product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
-//  { id: 12, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
-//  { id: 13, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
-//];
+ >> result
+[
+  { id: 10, selected: true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
+  { id: 11, selected: false, product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
+  { id: 12, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
+  { id: 13, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
+];
 ```
 ## License
 
