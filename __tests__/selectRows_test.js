@@ -38,9 +38,9 @@ describe('select.none', () => {
     expect(result).toEqual(expected);
   });
 });
-describe('select.rows', () => {
+describe('select.rows, note selected is not toggled for non-matching rows', () => {
   const initRows = [
-    { id: 10, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
+    { id: 10, selected: true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
     { id: 11,  product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
     { id: 12, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
     { id: 13, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
@@ -51,7 +51,7 @@ describe('select.rows', () => {
     { id: 13,  product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
   ];
   const expectedRows = [
-    { id: 10, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
+    { id: 10, selected:true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
     { id: 11,  product: 'pear', company: 'Pear Inc', price: 3, stock: 1000 },
     { id: 12, selected:true, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
     { id: 13, selected: true, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
