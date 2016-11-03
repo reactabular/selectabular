@@ -1,6 +1,6 @@
 {
   "name": "selectabular",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Selection utilities",
   "scripts": {
     "test": "jest --",
@@ -34,16 +34,16 @@
     ]
   },
   "author": "Juho Vepsalainen <bebraw@gmail.com> (http://github.com/bebraw)",
-  "contributors":[
+  "contributors": [
     {
-      "name":"Juho Vepsalainen",
-      "email":"brebaw@gmail.com",
-      "url":"http://github.com/brebaw"
+      "name": "Juho Vepsalainen",
+      "email": "brebaw@gmail.com",
+      "url": "http://github.com/brebaw"
     },
     {
-      "name":"Toni Urcola",
-      "email":"unmail.toni@gmail.com",
-      "url":"http://github.com/git-toni"
+      "name": "Toni Urcola",
+      "email": "unmail.toni@gmail.com",
+      "url": "http://github.com/git-toni"
     }
   ],
   "license": "MIT",
