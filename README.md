@@ -2,7 +2,7 @@
 
 # Selectabular - Selection utilities
 
-Common functionalities when dealing with table rows. 
+Common functionalities when dealing with table rows.
 - (De)-Selecting
 - Filtering
 - Toggling
@@ -36,7 +36,7 @@ const initRows = [
 ];
 const myfilter = row => row.price > 5
 const {rows, selectedRows: result } = selectabular.rows(myfilter)(initRows);
->> result 
+>> result
 [
   { id: 12,  product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
   { id: 13,  product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
