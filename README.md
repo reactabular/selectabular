@@ -21,8 +21,6 @@ Common functionalities when dealing with table rows.
 
 - `rows` array where each row has a `.selected=false` attribute
 
-
-
 ### `select.rows(filter)(rows)`
 
 Given a filter, it will select the matching rows and return them
@@ -60,9 +58,6 @@ const {rows, selectedRows: result } = selectabular.rows(myfilter)(initRows);
 - `rows` does *not* toggle the rows that do not match the filter; please use `select.none` a priori for that.
 - As shown in the example, `rows`, and `selectedRows` are internal variable names, used in the implementation; which can be easily renamed inline (See example where `selectedRows` is renamed to `result`)
 
-
-
-
 ### `select.toggle(filter)(rows)`
 
 #### Returns:
@@ -76,8 +71,8 @@ const initRows = [
   { id: 12, product: 'grape', company: 'Grapesoft', price: 22.1, stock: 18 },
   { id: 13, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
 ];
-const fil = row => row.id < 12
-const result = selectabular.toggle(fil)(initRows);
+const filter = row => row.id < 12
+const result = selectabular.toggle(filter)(initRows);
  >> result
 [
   { id: 10, selected: true, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },
@@ -86,6 +81,7 @@ const result = selectabular.toggle(fil)(initRows);
   { id: 13, product: 'banana', company: 'Banana Tech', price: 12, stock: 9 }
 ];
 ```
+
 ## License
 
 MIT. See LICENSE for details.
