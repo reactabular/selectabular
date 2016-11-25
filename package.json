@@ -3,11 +3,13 @@
   "version": "0.2.1",
   "description": "Selection utilities",
   "scripts": {
+    "test:all": "npm test && npm run test:lint",
     "test": "jest --",
     "test:coverage": "jest --coverage --",
     "test:lint": "eslint . --ext .js --cache",
     "test:watch": "jest --watch --",
-    "dist:build": "webpack"
+    "dist:build": "webpack",
+    "preversion": "npm run test:all && npm run dist:build && git commit --allow-empty -am \"Update dist\""
   },
   "main": "dist/selectabular.js",
   "repository": {
@@ -35,8 +37,8 @@
   "contributors": [
     {
       "name": "Juho Vepsalainen",
-      "email": "brebaw@gmail.com",
-      "url": "http://github.com/brebaw"
+      "email": "bebraw@gmail.com",
+      "url": "http://github.com/bebraw"
     },
     {
       "name": "Toni Urcola",
@@ -67,7 +69,6 @@
   },
   "pre-push": [
     "test:lint",
-    "test",
-    "dist:build"
+    "test"
   ]
 }
