@@ -1,6 +1,6 @@
 {
   "name": "selectabular",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Selection utilities",
   "scripts": {
     "test:all": "npm test && npm run test:lint",
