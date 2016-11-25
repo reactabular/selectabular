@@ -7,9 +7,7 @@
     "test:coverage": "jest --coverage --",
     "test:lint": "eslint . --ext .js --cache",
     "test:watch": "jest --watch --",
-    "dist:all": "npm run dist:build && npm run dist:build-min",
-    "dist:build": "webpack",
-    "dist:build-min": "webpack"
+    "dist:build": "webpack"
   },
   "main": "dist/selectabular.js",
   "repository": {
@@ -70,6 +68,6 @@
   "pre-push": [
     "test:lint",
     "test",
-    "dist:all"
+    "dist:build"
   ]
 }
