@@ -65,8 +65,7 @@
     "eslint-plugin-react": "^6.7.1",
     "git-prepush-hook": "^1.0.1",
     "jest": "^17.0.3",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^1.13.3"
   },
   "pre-push": [
     "test:lint",
