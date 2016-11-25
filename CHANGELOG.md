@@ -1,8 +1,12 @@
+1.0.0 / 2016-11-25
+==================
+
+  * Bump to 1.0.0 as this is stable.
+
 0.2.1 / 2016-11-03
 ==================
 
-  * Bug fix - Fix **package.json**  `main`.
-
+  * Bug fix - Fix **package.json** `main`.
 
 0.2.0 / 2016-11-03
 ==================
