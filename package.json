@@ -8,10 +8,10 @@
     "test:coverage": "jest --coverage --",
     "test:lint": "eslint . --ext .js --cache",
     "test:watch": "jest --watch --",
-    "dist:build": "webpack",
+    "dist:build": "rimraf ./dist && babel ./src --out-dir ./dist",
     "preversion": "npm run test:all && npm run dist:build && git commit --allow-empty -am \"Update dist\""
   },
-  "main": "dist/selectabular.js",
+  "main": "dist",
   "repository": {
     "type": "git",
     "url": "https://github.com/reactabular/selectabular.git"
@@ -52,6 +52,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^17.0.2",
@@ -66,7 +67,7 @@
     "eslint-plugin-react": "^6.7.1",
     "git-prepush-hook": "^1.0.1",
     "jest": "^17.0.3",
-    "webpack": "^1.13.3"
+    "rimraf": "^2.5.4"
   },
   "pre-push": [
     "test:lint",
