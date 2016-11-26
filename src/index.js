@@ -12,11 +12,18 @@ const toggleRow = (row) => {
   return { ...row, selected: !s };
 };
 
-export { default as byArrowKeys } from './by-arrow-keys';
-export const all = rows => rows.map(setSelectedTo(true));
-export const none = rows => rows.map(setSelectedTo(false));
-export const rows = filter => rows => ({
+const selectAll = rows => rows.map(setSelectedTo(true));
+const selectNone = rows => rows.map(setSelectedTo(false));
+const selectRows = filter => rows => ({
   rows: actOnMatching(setSelectedTo(true))(filter)(rows),
   selectedRows: actOnFiltered(returnRow)(filter)(rows)
 });
-export const toggle = filter => rows => actOnMatching(toggleRow)(filter)(rows);
+const selectToggle = filter => rows => actOnMatching(toggleRow)(filter)(rows);
+
+export { default as byArrowKeys } from './by-arrow-keys';
+export {
+  selectAll as all,
+  selectNone as none,
+  selectRows as rows,
+  selectToggle as toggle
+};
