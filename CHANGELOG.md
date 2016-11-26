@@ -2,6 +2,7 @@
 ==================
 
   * Breaking - Rewrite the API so that instead of `import select from 'selectabular';` it exposes a multiple functions. To achieve the old behavior, use `import * as select from 'selectabular'.
+  * Feature - Integrate `select.byArrowKeys` React helper from `reactabular-select`. See README for an usage example.
 
 1.0.0 / 2016-11-25
 ==================

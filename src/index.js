@@ -12,6 +12,7 @@ const toggleRow = (row) => {
   return { ...row, selected: !s };
 };
 
+export { default as byArrowKeys } from './by-arrow-keys';
 export const all = rows => rows.map(setSelectedTo(true));
 export const none = rows => rows.map(setSelectedTo(false));
 export const rows = filter => rows => ({
