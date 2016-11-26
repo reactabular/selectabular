@@ -1,5 +1,5 @@
 /* eslint-disable */
-import selectabular from '../src/index';
+import * as selectabular from '../src/index';
 
 const myrows = [
   { id: 10, product: 'apple', company: 'Apple Inc', price: 1.5, stock: 300 },

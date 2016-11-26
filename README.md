@@ -9,21 +9,25 @@ Common functionalities when dealing with table rows.
 
 ## API
 
-### `select.all(rows)`
+```javascript
+import * as select from 'selectabular';
 
-#### Returns:
+// Or you can cherry-pick
+import { all } from 'selectabular';
+import { all as selectAll } from 'selectabular';
+```
 
-- `rows` array where each row has a `.selected=true` attribute
+### `select.all(rows) => [<row>]`
 
-### `select.none(rows)`
+- Returned `rows` is an array where each row has a `.selected=true` attribute
 
-#### Returns:
+### `select.none(rows) => [<row>]`
 
-- `rows` array where each row has a `.selected=false` attribute
+- Returned `rows` is an array where each row has a `.selected=false` attribute
 
-### `select.rows(filter)(rows)`
+### `select.rows(filter)(rows) => { rows: [<row>], selectedRows: [<matchingRow>]}`
 
-Given a filter, it will select the matching rows and return them
+Given a filter, it will select the matching rows and return them:
 
 ```javascript
 const initRows = [
@@ -48,19 +52,12 @@ const {rows, selectedRows: result } = selectabular.rows(myfilter)(initRows);
 ];
 ```
 
-#### Returns:
-
-- `rows`: original rows, where each row's `.selected` is set to `true` if it matches the filter.
-- `selectedRows`: array containing *only* those rows matching the filter.
-
-#### Notes:
+**Important!**
 
 - `rows` does *not* toggle the rows that do not match the filter; please use `select.none` a priori for that.
 - As shown in the example, `rows`, and `selectedRows` are internal variable names, used in the implementation; which can be easily renamed inline (See example where `selectedRows` is renamed to `result`)
 
-### `select.toggle(filter)(rows)`
-
-#### Returns:
+### `select.toggle(filter)(rows) => [<row>]`
 
 - Input rows where each filter-matching row is toggled its `selected` attribute.
 

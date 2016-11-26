@@ -2,9 +2,7 @@ const actOnFiltered = actionFn => filter => rows => rows.filter(filter).map(acti
 
 const applyWhenPredicate = actionFn => predicate => row => (predicate(row) ? actionFn(row) : row);
 
-
 const actOnMatching = actionFn => filter => rows => rows.map(applyWhenPredicate(actionFn)(filter));
-
 
 const returnRow = row => row;
 const setAttrTo = attr => val => row => ({ ...row, [attr]: val });
@@ -14,14 +12,10 @@ const toggleRow = (row) => {
   return { ...row, selected: !s };
 };
 
-const select = {
-  all: rows => rows.map(setSelectedTo(true)),
-  none: rows => rows.map(setSelectedTo(false)),
-  rows: filter => rows => ({
-    rows: actOnMatching(setSelectedTo(true))(filter)(rows),
-    selectedRows: actOnFiltered(returnRow)(filter)(rows)
-  }),
-  toggle: filter => rows => actOnMatching(toggleRow)(filter)(rows)
-};
-
-export default select;
+export const all = rows => rows.map(setSelectedTo(true));
+export const none = rows => rows.map(setSelectedTo(false));
+export const rows = filter => rows => ({
+  rows: actOnMatching(setSelectedTo(true))(filter)(rows),
+  selectedRows: actOnFiltered(returnRow)(filter)(rows)
+});
+export const toggle = filter => rows => actOnMatching(toggleRow)(filter)(rows);
