@@ -19,7 +19,8 @@
   "keywords": [
     "select",
     "selecting",
-    "table-filtering"
+    "table-filtering",
+    "reactabular"
   ],
   "files": [
     "dist"
