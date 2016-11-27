@@ -98,8 +98,8 @@ import classnames from 'classnames';
 import cloneDeep from 'lodash/cloneDeep';
 import find from 'lodash/find';
 import findIndex from 'lodash/findIndex';
-import { Table } from 'reactabular';
 import { compose } from 'redux';
+import * as Table from 'reactabular-table';
 import * as select from 'selectabular';
 */
 
