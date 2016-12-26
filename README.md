@@ -89,7 +89,9 @@ If there is a selection (`selectedRowIndex`), then it triggers `onSelectRow` wit
 
 ### How to Use?
 
-The following example illustrates how to use the functionality with a Reactabular based table. You can select a row by clicking in the following example. If there's a selection, you can move up and down using the arrow keys.
+The following example illustrates how to use the functionality with a Reactabular based table. Selection is tracked per row to comply with Reactabular's strict `shouldComponentUpdate`. This allows it to tell apart the rows that have changed while maintaining good performance.
+
+You can select a row by clicking in the following example. If there's a selection, you can move up and down using the arrow keys.
 
 ```jsx
 /*
