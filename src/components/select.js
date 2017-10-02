@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Select extends React.Component {
   constructor(props) {
@@ -41,12 +42,12 @@ class Select extends React.Component {
   }
 }
 Select.propTypes = {
-  children: React.PropTypes.any.isRequired,
-  selectedRowIndex: React.PropTypes.any,
-  onSelectRow: React.PropTypes.func.isRequired,
+  children: PropTypes.any.isRequired,
+  selectedRowIndex: PropTypes.any,
+  onSelectRow: PropTypes.func.isRequired,
   // TODO: Same as for table but this is enough for now
   // -> extract reactabular-types?
-  rows: React.PropTypes.any.isRequired
+  rows: PropTypes.any.isRequired
 };
 Select.defaultProps = {
   onSelectRow: () => {}
